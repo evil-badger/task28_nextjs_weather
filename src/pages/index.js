@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Component1 from '@/components/component1/Component1'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,9 +40,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.center}>
-        <Component1 prop1="Пропс 1" prop2="Пропс 2" prop3="Пропс 3"/>
+        <div className="homeCities">
           <span>Это домашняя страница. В шапке сайта есть меню с списком городов. После выбора нужного города появится информация о текущей погоде.</span>
+          <Link className='customLink' href='/weatherKyiv'>Город Киев</Link>
+          <Link className='customLink'href='/weatherLviv'>Город Львов</Link>
+          <Link className='customLink' href='/weatherOdesa'>Город Одесса</Link>
         </div>
 
         <div className={styles.grid}>
